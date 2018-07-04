@@ -7,6 +7,9 @@ public class PlayerControl : MonoBehaviour {
     public GameObject PlayerBulletGO; // this is out player bullet prefab
     public GameObject bulletPosition01;
     public GameObject bulletPosition02;
+    public GameObject GameManagerGO; //game manager
+
+    //lives ui text
     public Text LiveUIText;
 
     const int MaxLives = 3; //max lives
@@ -80,5 +83,24 @@ public class PlayerControl : MonoBehaviour {
         transform.position = pos;
 
 
+    }
+
+     void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Dafna's part 6 here
+
+
+        //part 7- after Play Explosion part (destroy is removed in this phase)
+        lives--;
+        LiveUIText.text = lives.ToString();
+
+        if(lives == 0)
+        {
+            //game over
+            GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
+
+            //hide player ship
+            gameObject.SetActive(false);
+        }
     }
 }

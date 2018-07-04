@@ -44,7 +44,7 @@ public class EnemyBullet : MonoBehaviour
             //update the bullet's position
             transform.position = position;
 
-            //Next we need to remove the bullet from out gamr
+            //Next we need to remove the bullet from out game
             //if the bullet goes outside the screen
 
             //this is the bottom-left point of the screen
@@ -54,7 +54,7 @@ public class EnemyBullet : MonoBehaviour
             Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
             //if the bullet goes outside the screen, then destroy it
-            if ((transform.position.x > min.x) || (transform.position.x > max.x) || (transform.position.y < min.y) || (transform.position.y > max.y))
+            if ((transform.position.x < min.x) || (transform.position.x > max.x) || (transform.position.y < min.y) || (transform.position.y > max.y))
             {
                 Destroy(gameObject);
             }

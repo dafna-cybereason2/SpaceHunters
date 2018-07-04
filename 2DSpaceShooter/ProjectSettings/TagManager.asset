@@ -4,6 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - PlayerShipTag
+  - EnemyShipTag
+  - PlayerBulletTag
+  - EnemyBulletTag
+  tags:
   - ScoreTextTag
   layers:
   - Default
