@@ -5,6 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    public GameObject scoreUITextGO; /// reference to the score text UI game object
+
+
+
     //Game objects
     public GameObject playButton;
     public GameObject playerShip;
