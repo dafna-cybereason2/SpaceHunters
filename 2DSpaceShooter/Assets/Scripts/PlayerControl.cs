@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour {
     public GameObject bulletPosition02;
     public GameObject GameManagerGO; //game manager
     public GameObject ExplosionGO;
+    public AudioSource Audio;
     //lives ui text
     public Text LiveUIText;
 
@@ -36,8 +37,9 @@ public class PlayerControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //fire when space 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetButtonDown("Fire1"))
         {
+            Audio.Play();
             //init fist bullet
             GameObject buller01 = (GameObject)Instantiate(PlayerBulletGO);
             buller01.transform.position = bulletPosition01.transform.position;
