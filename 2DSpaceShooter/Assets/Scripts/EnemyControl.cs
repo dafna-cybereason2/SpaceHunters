@@ -1,14 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyControl : MonoBehaviour {
     public GameObject ExplosionGO;
+    GameObject LiveUIText;
     GameObject scoreUITextGO; /// Refrence to the text UI game object
+
     float speed;
     // Use this for initialization
     void Start() {
-        speed = 2f;
+        LiveUIText = GameObject.FindGameObjectWithTag("LivesTextTag");
+        speed = 2f + ((int)(GameManager.GlobalTimer / 10));
+        if (speed>5)
+            speed = 5;
+        //Debug.Log("start : "+speed);
         ////Get the score text UI
         scoreUITextGO = GameObject.FindGameObjectWithTag("ScoreTextTag");
 
@@ -42,8 +49,13 @@ public class EnemyControl : MonoBehaviour {
             PlayExplosion();
             Destroy(gameObject);
             scoreUITextGO.GetComponent<GameScore>().Score += 100;
-          
 
+             if (scoreUITextGO.GetComponent<GameScore>().Score % 1000 == 0)
+            {
+                int lives = (int)float.Parse(LiveUIText.GetComponent<Text>().text.ToString());
+                lives++;
+                LiveUIText.GetComponent<Text>().text = lives.ToString();
+            }
 
         }
     }

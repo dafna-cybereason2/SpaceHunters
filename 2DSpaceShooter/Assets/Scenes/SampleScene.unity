@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 1115177465}
   m_Layer: 5
   m_Name: TextLives
-  m_TagString: Untagged
+  m_TagString: LivesTextTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   GameManagerGO: {fileID: 2018476972}
   ExplosionGO: {fileID: 1295090288888686, guid: 62123cd4b395d904094a9ed965545e5c,
     type: 2}
-  LiveUIText: {fileID: 1115177465}
+  LiveUIText: {fileID: 1115177463}
   speed: 4
 --- !u!61 &1613240743
 BoxCollider2D:
@@ -1533,6 +1533,7 @@ MonoBehaviour:
   playerShip: {fileID: 1613240738}
   enemySpawner: {fileID: 1838630317}
   GameOverGO: {fileID: 1656026697}
+  ScoreText: {fileID: 0}
 --- !u!1 &2072956484
 GameObject:
   m_ObjectHideFlags: 0

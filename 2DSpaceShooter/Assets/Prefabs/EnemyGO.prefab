@@ -163,6 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ExplosionGO: {fileID: 1295090288888686, guid: 62123cd4b395d904094a9ed965545e5c,
     type: 2}
+  LiveUIText: {fileID: 0}
 --- !u!212 &212824093322465212
 SpriteRenderer:
   m_ObjectHideFlags: 1

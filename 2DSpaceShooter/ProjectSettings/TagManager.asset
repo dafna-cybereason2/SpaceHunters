@@ -8,8 +8,8 @@ TagManager:
   - EnemyShipTag
   - PlayerBulletTag
   - EnemyBulletTag
-  tags:
   - ScoreTextTag
+  - LivesTextTag
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
     public GameObject scoreUITextGO; /// reference to the score text UI game object
-
+    public static float GlobalTimer;
 
 
     //Game objects
@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject playerShip;
     public GameObject enemySpawner;
     public GameObject GameOverGO;
+    public GameObject ScoreText;
 
     public enum GameManagerState
     {
@@ -28,8 +29,14 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GMState = GameManagerState.Opening;
+        GlobalTimer = 0;
     }
 
+    void Update()
+    {
+        GlobalTimer += Time.deltaTime;
+        //Debug.Log("GlobalTimer: "+ GlobalTimer);
+    }
     // Update game manager state
     void UpdateGameManagerState()
     {

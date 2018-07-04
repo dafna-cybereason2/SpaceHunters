@@ -7,6 +7,7 @@ public class EnemySpwner : MonoBehaviour {
     /// </summary>
     public GameObject EnemyGO;
     float maxSpawnRateInSec = 5f;
+    float minSpawnRateInSec = 1f;
 
     // Use this for initialization
     void Start () {
@@ -36,22 +37,30 @@ public class EnemySpwner : MonoBehaviour {
     void ScheduledNextEnemySpawn()
     {
         float spawnInSeconds;
-        if (maxSpawnRateInSec > 1f)
+        //if (minSpawnRateInSec > 0.1)
+            minSpawnRateInSec = 0.99f * minSpawnRateInSec;
+        //if (maxSpawnRateInSec > 0.3)
+            maxSpawnRateInSec = 0.99f * maxSpawnRateInSec;
+        
+
+        if (maxSpawnRateInSec > minSpawnRateInSec)
         {
-            spawnInSeconds = Random.Range(1F, maxSpawnRateInSec);
+            spawnInSeconds = Random.Range(minSpawnRateInSec, maxSpawnRateInSec);
+            //Debug.Log("minSpawnRateInSec, maxSpawnRateInSec, spawnInSeconds: " + minSpawnRateInSec + ", "+ maxSpawnRateInSec + ", "+ spawnInSeconds);
+
         }
         else
-            spawnInSeconds = 1f;
+            spawnInSeconds = minSpawnRateInSec;
         Invoke("SpawnEnemy", spawnInSeconds);
     }
 
     //increase enemy spawn rate
     void IncreaseSpawnRate()
      {
-        if (maxSpawnRateInSec > 1f)
+        if (maxSpawnRateInSec > minSpawnRateInSec)
             maxSpawnRateInSec--;
 
-        if (maxSpawnRateInSec == 1f)
+        if (maxSpawnRateInSec == minSpawnRateInSec)
             CancelInvoke("IncreaseSpawnRate");
     }
     //Start enemy spawn

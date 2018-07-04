@@ -10,18 +10,16 @@ public class PlayerControl : MonoBehaviour {
     public GameObject GameManagerGO; //game manager
     public GameObject ExplosionGO;
     //lives ui text
-    public Text LiveUIText;
+    public GameObject LiveUIText;
+
 
     const int MaxLives = 3; //max lives
-    int lives; //current lives
-
     public float speed;
 
     public void  Init()
     {
-        lives = MaxLives;
-        LiveUIText.text = lives.ToString();
-
+        LiveUIText.GetComponent<Text>().text = MaxLives.ToString();
+        
         // Reset position to center
         transform.position = new Vector2 (0,0);
 
@@ -87,6 +85,7 @@ public class PlayerControl : MonoBehaviour {
 
      void OnTriggerEnter2D(Collider2D collision)
     {
+        int lives = (int)float.Parse(LiveUIText.GetComponent<Text>().text.ToString());
         //Dafna's part 6 here
         //player ship with an enmy ship
         if ((collision.tag == "EnemyShipTag") || (collision.tag == "EnemyBulletTag"))
@@ -94,7 +93,7 @@ public class PlayerControl : MonoBehaviour {
             PlayExplosion();
             
             lives--;
-            LiveUIText.text = lives.ToString();
+            LiveUIText.GetComponent<Text>().text = lives.ToString(); 
         }
 
 

@@ -11,6 +11,8 @@ public class PlanetController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (planets.Length==0)
+            return;
         availablePlanets.Enqueue(planets[0]);
         availablePlanets.Enqueue(planets[1]);
         availablePlanets.Enqueue(planets[2]);
