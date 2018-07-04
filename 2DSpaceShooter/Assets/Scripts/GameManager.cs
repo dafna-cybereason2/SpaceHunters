@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    public GameObject scoreUITextGO; /// reference to the score text UI game object 
+
+   
     public enum GameManagerState
     {
         Opening,

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpwner : MonoBehaviour {
-
+    
+    /// </summary>
     public GameObject EnemyGO;
     float maxSpawnRateInSec = 5f;
 
