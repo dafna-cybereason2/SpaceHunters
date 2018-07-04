@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public GameObject playerShip;
     public GameObject enemySpawner;
     public GameObject GameOverGO;
+    public GameObject player2Ship;
 
     public enum GameManagerState
     {
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
 
                 //set player ship visible
                 playerShip.GetComponent<PlayerControl>().Init();
+                player2Ship.GetComponent<Player2Control>().Init();
 
                 //start enemy spawner
                 enemySpawner.GetComponent<EnemySpwner>().ScheduledEnemySpawner();
