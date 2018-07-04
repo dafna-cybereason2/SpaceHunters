@@ -30,4 +30,19 @@ public class EnemySpwner : MonoBehaviour {
         GameObject anEnemy = (GameObject)Instantiate(EnemyGO);
         anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
     }
+
+    //Start enemy spawn
+    public void ScheduledEnemySpawner()
+    {
+        Invoke("SpawnEnemy", maxSpawnRateInSec);
+        
+        //missing the IncreaseSpawnFunction. DON'T FORGET TO ADD IT AFTER READY
+    }
+    
+    //Stop enemny spawn on gameover
+    public void UnscheduledEnemySpawner()
+    {
+        CancelInvoke("SpawnEnemy");
+        CancelInvoke("IncreaseSpawnRate");
+    }
 }

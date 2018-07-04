@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     //Game objects
     public GameObject playButton;
     public GameObject playerShip;
+    public GameObject enemySpawner;
+    public GameObject GameOverGO;
 
     public enum GameManagerState
     {
@@ -18,18 +20,25 @@ public class GameManager : MonoBehaviour
 
     GameManagerState GMState;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start()
     {
         GMState = GameManagerState.Opening;
-	}
-	
-	// Update game manager state
-	void UpdateGameManagerState ()
+    }
+
+    // Update game manager state
+    void UpdateGameManagerState()
     {
-        switch(GMState)
+        switch (GMState)
         {
             case GameManagerState.Opening:
+
+                //HIDE game over
+                GameOverGO.SetActive(false);
+
+                //play button show
+                playButton.SetActive(true);
+
                 break;
             case GameManagerState.Gameplay:
                 //hide play button
@@ -38,11 +47,24 @@ public class GameManager : MonoBehaviour
                 //set player ship visible
                 playerShip.GetComponent<PlayerControl>().Init();
 
+                //start enemy spawner
+                enemySpawner.GetComponent<EnemySpwner>().ScheduledEnemySpawner();
+
                 break;
             case GameManagerState.GameOver:
+
+                //stop enemy
+                enemySpawner.GetComponent<EnemySpwner>().UnscheduledEnemySpawner();
+
+                //display game over
+                GameOverGO.SetActive(true);
+
+                //change state to opening
+                Invoke("ChangeToOpeningState", 8f);
+
                 break;
         }
-	}
+    }
 
     //Set game manager state
     public void SetGameManagerState(GameManagerState state)
@@ -50,11 +72,18 @@ public class GameManager : MonoBehaviour
         GMState = state;
         UpdateGameManagerState();
     }
-    
+
     //will be called when user clicks play
     public void StartGamePlay()
     {
         GMState = GameManagerState.Gameplay;
         UpdateGameManagerState();
+    }
+
+    //Game manager state to opening
+    public void ChangeToOpeningState()
+    {
+        SetGameManagerState(GameManagerState.Opening);
+
     }
 }
