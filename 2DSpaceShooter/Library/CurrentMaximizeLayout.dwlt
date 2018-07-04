@@ -20,10 +20,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 504, y: 471}
-  m_MaxSize: {x: 14000, y: 14021}
+  m_MinSize: {x: 683, y: 471}
+  m_MaxSize: {x: 14002, y: 14021}
   vertical: 0
-  controlID: 343
+  controlID: 1866
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 0
     width: 1370
     height: 947
-  m_MinSize: {x: 404, y: 471}
+  m_MinSize: {x: 406, y: 471}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 344
+  controlID: 1867
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,10 +143,10 @@ MonoBehaviour:
     y: 0
     width: 1370
     height: 510
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 252
+  controlID: 1847
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,8 +165,8 @@ MonoBehaviour:
     y: 0
     width: 404
     height: 510
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -199,9 +199,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 3a0c0000
-    m_LastClickedID: 3130
-    m_ExpandedIDs: f0fbffff00000000
+    m_SelectedIDs: d22e0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 906affffc473ffffa479ffffe285ffffe88afffff0fbffff000000004e0c0000580c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -277,14 +277,14 @@ MonoBehaviour:
     height: 489
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1419.3611824416478
+  lastFramingTime: 1274.6630067357519
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 481, y: 267.5, z: 0}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 481, y: 267.5, z: 0}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -316,9 +316,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1816.2515
+    m_Target: 5.0083113
     speed: 2
-    m_Value: 1816.2515
+    m_Value: 5.0083113
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -418,20 +418,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites
+    - Assets/Sprites/Test sprites
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Sprites/Test sprites
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a0b0000
-    m_LastClickedID: 2906
-    m_ExpandedIDs: 000000004809000000ca9a3bffffff7f
+    m_SelectedIDs: a02e0000
+    m_LastClickedID: 11936
+    m_ExpandedIDs: 00000000480900005a0b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -459,7 +459,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004809000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000480900005a0b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -484,9 +484,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 3a0c0000
-    m_LastClickedInstanceID: 3130
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: d22e0000
+    m_LastClickedInstanceID: 11986
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300003a33000008340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -557,14 +557,14 @@ MonoBehaviour:
     y: 0
     width: 550
     height: 947
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -887,11 +887,89 @@ MonoBehaviour:
       updatedTimeString: 2018-07-04T13:20:50.424+03:00
       cacheType: 6
   historyView:
-    currentLogHasUpdate: 0
-    currentTrackingStatusHasUpdate: 0
+    currentLogHasUpdate: 1
+    currentTrackingStatusHasUpdate: 1
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: f4614c7e4516a560e3b5a080b357325dfee36497
+        mergeA: 
+        mergeB: 
+        authorName: kobi malul
+        authorEmail: kobi@cyberdomain.local
+        commitEmail: kobi@cyberdomain.local
+        commitName: kobi malul
+        summary: commit
+        description: commit
+        timeString: 2018-07-04T13:37:48.000+03:00
+        commitTimeString: 2018-07-04T13:37:48.000+03:00
+        changes:
+        - path: 2DSpaceShooter\Assets\Scenes\SampleScene.unity
+          fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          status: 3
+          staged: 0
+        - path: 2DSpaceShooter\Library\CurrentMaximizeLayout.dwlt
+          fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Library\CurrentMaximizeLayout.dwlt
+          projectPath: Library\CurrentMaximizeLayout.dwlt
+          originalPath: 
+          status: 3
+          staged: 0
+        - path: 2DSpaceShooter\Library\ScriptAssemblies\Assembly-CSharp.dll
+          fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Library\ScriptAssemblies\Assembly-CSharp.dll
+          projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+          originalPath: 
+          status: 3
+          staged: 0
+        - path: 2DSpaceShooter\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+          fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+          projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+          originalPath: 
+          status: 3
+          staged: 0
+        - path: 2DSpaceShooter\Library\assetDatabase3
+          fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Library\assetDatabase3
+          projectPath: Library\assetDatabase3
+          originalPath: 
+          status: 3
+          staged: 0
+      - commitID: 2130b4f8ca6e9d6d04c0642e65e474ac8b94c721
+        mergeA: d2231eb1f75514b48b64d98e44a3a159140c210c
+        mergeB: 6480e818ade7c0dd535f922d2830cf3add7f4fb7
+        authorName: kobi malul
+        authorEmail: kobi@cyberdomain.local
+        commitEmail: kobi@cyberdomain.local
+        commitName: kobi malul
+        summary: Merge branch 'master' of github.com:dafna-cybereason2/SpaceHunters
+        description: Merge branch 'master' of github.com:dafna-cybereason2/SpaceHunters
+        timeString: 2018-07-04T13:35:48.000+03:00
+        commitTimeString: 2018-07-04T13:35:48.000+03:00
+        changes: []
+      - commitID: 6480e818ade7c0dd535f922d2830cf3add7f4fb7
+        mergeA: 
+        mergeB: 
+        authorName: Linn Tamar-Omer
+        authorEmail: Linn.Tamar-Omer@cyberdomain.local
+        commitEmail: Linn.Tamar-Omer@cyberdomain.local
+        commitName: Linn Tamar-Omer
+        summary: part 5
+        description: part 5
+        timeString: 2018-07-04T13:24:30.000+03:00
+        commitTimeString: 2018-07-04T13:24:30.000+03:00
+        changes:
+        - path: 2DSpaceShooter\Assets\Scripts\EnemyBullet.cs
+          fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Assets\Scripts\EnemyBullet.cs
+          projectPath: Assets\Scripts\EnemyBullet.cs
+          originalPath: 
+          status: 4
+          staged: 0
+        - path: 2DSpaceShooter\Assets\Scripts\EnemyBullet.cs.meta
+          fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Assets\Scripts\EnemyBullet.cs.meta
+          projectPath: Assets\Scripts\EnemyBullet.cs.meta
+          originalPath: 
+          status: 4
+          staged: 0
       - commitID: d2231eb1f75514b48b64d98e44a3a159140c210c
         mergeA: 12598c989896875da52fc2db7b447b418975bf3b
         mergeB: 5fcd279bab8c3a6f7bfe751bae4873f394e963d1
@@ -6959,8 +7037,8 @@ MonoBehaviour:
           originalPath: 
           status: 4
           staged: 0
-      statusAhead: 2
-      selectedIndex: 5
+      statusAhead: 4
+      selectedIndex: 8
     selectedEntry:
       commitID: 73947964f6bdc753559146b98747321e640671d1
       mergeA: 
@@ -12424,6 +12502,84 @@ MonoBehaviour:
         staged: 0
     detailsScroll: {x: 0, y: 0}
     logEntries:
+    - commitID: f4614c7e4516a560e3b5a080b357325dfee36497
+      mergeA: 
+      mergeB: 
+      authorName: kobi malul
+      authorEmail: kobi@cyberdomain.local
+      commitEmail: kobi@cyberdomain.local
+      commitName: kobi malul
+      summary: commit
+      description: commit
+      timeString: 2018-07-04T13:37:48.000+03:00
+      commitTimeString: 2018-07-04T13:37:48.000+03:00
+      changes:
+      - path: 2DSpaceShooter\Assets\Scenes\SampleScene.unity
+        fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        status: 3
+        staged: 0
+      - path: 2DSpaceShooter\Library\CurrentMaximizeLayout.dwlt
+        fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Library\CurrentMaximizeLayout.dwlt
+        projectPath: Library\CurrentMaximizeLayout.dwlt
+        originalPath: 
+        status: 3
+        staged: 0
+      - path: 2DSpaceShooter\Library\ScriptAssemblies\Assembly-CSharp.dll
+        fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Library\ScriptAssemblies\Assembly-CSharp.dll
+        projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+        originalPath: 
+        status: 3
+        staged: 0
+      - path: 2DSpaceShooter\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+        fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+        projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll.mdb
+        originalPath: 
+        status: 3
+        staged: 0
+      - path: 2DSpaceShooter\Library\assetDatabase3
+        fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Library\assetDatabase3
+        projectPath: Library\assetDatabase3
+        originalPath: 
+        status: 3
+        staged: 0
+    - commitID: 2130b4f8ca6e9d6d04c0642e65e474ac8b94c721
+      mergeA: d2231eb1f75514b48b64d98e44a3a159140c210c
+      mergeB: 6480e818ade7c0dd535f922d2830cf3add7f4fb7
+      authorName: kobi malul
+      authorEmail: kobi@cyberdomain.local
+      commitEmail: kobi@cyberdomain.local
+      commitName: kobi malul
+      summary: Merge branch 'master' of github.com:dafna-cybereason2/SpaceHunters
+      description: Merge branch 'master' of github.com:dafna-cybereason2/SpaceHunters
+      timeString: 2018-07-04T13:35:48.000+03:00
+      commitTimeString: 2018-07-04T13:35:48.000+03:00
+      changes: []
+    - commitID: 6480e818ade7c0dd535f922d2830cf3add7f4fb7
+      mergeA: 
+      mergeB: 
+      authorName: Linn Tamar-Omer
+      authorEmail: Linn.Tamar-Omer@cyberdomain.local
+      commitEmail: Linn.Tamar-Omer@cyberdomain.local
+      commitName: Linn Tamar-Omer
+      summary: part 5
+      description: part 5
+      timeString: 2018-07-04T13:24:30.000+03:00
+      commitTimeString: 2018-07-04T13:24:30.000+03:00
+      changes:
+      - path: 2DSpaceShooter\Assets\Scripts\EnemyBullet.cs
+        fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Assets\Scripts\EnemyBullet.cs
+        projectPath: Assets\Scripts\EnemyBullet.cs
+        originalPath: 
+        status: 4
+        staged: 0
+      - path: 2DSpaceShooter\Assets\Scripts\EnemyBullet.cs.meta
+        fullPath: C:\2d_shooter\SpaceHunters\2DSpaceShooter\Assets\Scripts\EnemyBullet.cs.meta
+        projectPath: Assets\Scripts\EnemyBullet.cs.meta
+        originalPath: 
+        status: 4
+        staged: 0
     - commitID: d2231eb1f75514b48b64d98e44a3a159140c210c
       mergeA: 12598c989896875da52fc2db7b447b418975bf3b
       mergeB: 5fcd279bab8c3a6f7bfe751bae4873f394e963d1
@@ -18491,7 +18647,7 @@ MonoBehaviour:
         originalPath: 
         status: 4
         staged: 0
-    statusAhead: 2
+    statusAhead: 4
     treeChanges:
       assets:
         keys: []
@@ -42883,10 +43039,10 @@ MonoBehaviour:
           status: 0
           staged: 0
     lastLogChangedEvent:
-      updatedTimeString: 2018-07-04T13:30:08.108+03:00
+      updatedTimeString: 2018-07-04T13:44:25.855+03:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2018-07-04T13:30:07.947+03:00
+      updatedTimeString: 2018-07-04T13:44:25.690+03:00
       cacheType: 4
   settingsView:
     gitPathView:
@@ -42963,9 +43119,9 @@ MonoBehaviour:
   currentRemoteName: master
   currentBranch: master
   currentRemoteUrl: git@github.com:dafna-cybereason2/SpaceHunters.git
-  statusAhead: 2
+  statusAhead: 4
   statusBehind: 0
-  hasItemsToCommit: 0
+  hasItemsToCommit: 1
   currentBranchContent:
     m_Text: master
     m_Image: {fileID: 0}
@@ -42975,13 +43131,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the master remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2018-07-04T13:20:43.482+03:00
+    updatedTimeString: 2018-07-04T13:37:15.075+03:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2018-07-04T13:20:43.811+03:00
+    updatedTimeString: 2018-07-04T13:40:18.033+03:00
     cacheType: 4
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2018-07-04T13:20:44.550+03:00
+    updatedTimeString: 2018-07-04T13:40:17.999+03:00
     cacheType: 5
   pullButtonContent:
     m_Text: Pull
