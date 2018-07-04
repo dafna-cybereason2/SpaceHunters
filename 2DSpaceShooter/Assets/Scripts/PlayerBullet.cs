@@ -32,4 +32,12 @@ public class PlayerBullet : MonoBehaviour {
 
 
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "EnemyShipTag")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

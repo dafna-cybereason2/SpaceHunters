@@ -46,6 +46,6 @@ public class EnemyControl : MonoBehaviour {
     void PlayExplosion()
     { }
 
-        
+
 }
 

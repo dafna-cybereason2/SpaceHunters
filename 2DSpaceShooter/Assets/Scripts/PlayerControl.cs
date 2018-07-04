@@ -88,6 +88,10 @@ public class PlayerControl : MonoBehaviour {
      void OnTriggerEnter2D(Collider2D collision)
     {
         //Dafna's part 6 here
+        if ((collision.tag == "EnemyShipTag") || (collision.tag == "EnemyBulletTag"))
+        {
+            Destroy(gameObject); //Distroy the  player ship
+        }
 
 
         //part 7- after Play Explosion part (destroy is removed in this phase)
