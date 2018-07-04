@@ -10,15 +10,17 @@ public class CreditsRun : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        new WaitForSecondsRealtime(6f);
-        SceneManager.LoadScene("SampleScene");
 
     }
 	
 	// Update is called once per frame
 	void Update ()
    { 
-         transform.Translate(Vector2.up * y0ffset * Time.deltaTime); 
-       
+         transform.Translate(Vector2.up * y0ffset * Time.deltaTime);
+
+        if (Input.GetButtonDown("Fire1")) 
+        {
+            SceneManager.LoadScene("StartMenu");
+        }
     }
 }

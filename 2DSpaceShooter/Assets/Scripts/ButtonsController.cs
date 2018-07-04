@@ -6,7 +6,7 @@ public class ButtonsController : MonoBehaviour
 {
     int index = 0;
     public int totalLevels = 4;
-    public float y0ffset = 100f;
+    public float y0ffset = 1f;
 
 	// Use this for initialization
 	void Start ()

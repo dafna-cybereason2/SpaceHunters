@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -67,8 +68,11 @@ public class GameManager : MonoBehaviour
                 //display game over
                 GameOverGO.SetActive(true);
 
+                //load credits scene
+                StartCoroutine(LoadLevelDelay(5));
+
                 //change state to opening
-                Invoke("ChangeToOpeningState", 5f);
+                //Invoke("ChangeToOpeningState", 5f);
 
                 break;
         }
@@ -93,5 +97,10 @@ public class GameManager : MonoBehaviour
     {
         SetGameManagerState(GameManagerState.Opening);
 
+    }
+    IEnumerator LoadLevelDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("Credits");
     }
 }
