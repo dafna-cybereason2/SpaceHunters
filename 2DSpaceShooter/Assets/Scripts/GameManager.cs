@@ -45,6 +45,8 @@ public class GameManager : MonoBehaviour
 
                 break;
             case GameManagerState.Gameplay:
+                //Reset the score 
+                scoreUITextGO.GetComponent<GameScore>().Score = 0;
                 //hide play button
                 playButton.SetActive(false);
 
