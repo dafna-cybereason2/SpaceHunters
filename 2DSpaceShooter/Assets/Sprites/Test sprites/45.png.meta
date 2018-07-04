@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: d0844152321d5f746b5a561ab3a173bc
-=======
-guid: cc22966852b21ae48be4dad1a38d227f
->>>>>>> cbb1877003e2b3dee0fbf4b83c699acd8ee23db6
+guid: 3a7763459581e2f4e9f83c9244848e67
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -62,13 +58,8 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-<<<<<<< HEAD
     maxTextureSize: 2048
     resizeAlgorithm: 0
-=======
-    maxTextureSize: 1024
-    resizeAlgorithm: 1
->>>>>>> cbb1877003e2b3dee0fbf4b83c699acd8ee23db6
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -78,34 +69,14 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: Standalone
-    maxTextureSize: 1024
-<<<<<<< HEAD
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 2
-=======
-    resizeAlgorithm: 1
-    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Windows Store Apps
-    maxTextureSize: 1024
-    resizeAlgorithm: 1
-    textureFormat: -1
->>>>>>> cbb1877003e2b3dee0fbf4b83c699acd8ee23db6
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-<<<<<<< HEAD
     overridden: 1
-=======
-    overridden: 0
->>>>>>> cbb1877003e2b3dee0fbf4b83c699acd8ee23db6
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
@@ -113,11 +84,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-<<<<<<< HEAD
-    spriteID: 039118c8cef543f448cbe88cffd35683
-=======
-    spriteID: 4281c526b81c77c428eaa865718cebe1
->>>>>>> cbb1877003e2b3dee0fbf4b83c699acd8ee23db6
+    spriteID: 426e4a8d50cda374a8a493b03337af5d
     vertices: []
     indices: 
     edges: []
