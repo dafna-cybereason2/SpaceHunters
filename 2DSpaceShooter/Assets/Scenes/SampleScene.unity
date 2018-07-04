@@ -229,6 +229,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1017d1015e7007444b4e69a23d5d0976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerBulletGO: {fileID: 1358142670951538, guid: f18d1b24d5502bd46b1cb64a67507a4d,
+    type: 2}
+  bulletPosition01: {fileID: 670220340}
+  bulletPosition02: {fileID: 2007961657}
+  GameManagerGO: {fileID: 2018476972}
+  ExplosionGO: {fileID: 1295090288888686, guid: 62123cd4b395d904094a9ed965545e5c,
+    type: 2}
+  LiveUIText: {fileID: 1115177465}
+  speed: 0
 --- !u!95 &467805683
 Animator:
   serializedVersion: 3
@@ -1297,6 +1306,7 @@ MonoBehaviour:
   GameManagerGO: {fileID: 2018476972}
   ExplosionGO: {fileID: 1295090288888686, guid: 62123cd4b395d904094a9ed965545e5c,
     type: 2}
+  Audio: {fileID: 0}
   LiveUIText: {fileID: 1115177465}
   speed: 4
 --- !u!61 &1613240743
@@ -1666,7 +1676,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1759636764}
-  - component: {fileID: 1759636766}
   - component: {fileID: 1759636765}
   m_Layer: 0
   m_Name: PlanetControllerGO
@@ -1706,18 +1715,6 @@ MonoBehaviour:
   - {fileID: 281889611}
   - {fileID: 2075927257}
   - {fileID: 1527444125}
---- !u!114 &1759636766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1759636763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62575401505ba1e49858ab2051790dd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  planets: []
 --- !u!1 &1838630317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,6 +1829,7 @@ MonoBehaviour:
   playerShip: {fileID: 1613240738}
   enemySpawner: {fileID: 1838630317}
   GameOverGO: {fileID: 1656026697}
+  player2Ship: {fileID: 467805680}
 --- !u!1 &2072956484
 GameObject:
   m_ObjectHideFlags: 0
