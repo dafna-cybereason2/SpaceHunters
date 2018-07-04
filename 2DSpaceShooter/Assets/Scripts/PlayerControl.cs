@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
-    GameObject PlayerBulletGO;
+    public GameObject PlayerBulletGO; // this is out player bullet prefab
+    public GameObject bulletPosition01;
+    public GameObject bulletPosition02;
 
     public float speed;
 	// Use this for initialization
@@ -13,6 +15,17 @@ public class PlayerControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        //fire when space 
+        if (Input.GetKeyDown("space"))
+        {
+            //init fist bullet
+            GameObject buller01 = (GameObject)Instantiate(PlayerBulletGO);
+            buller01.transform.position = bulletPosition01.transform.position;
+
+            //init second bullet
+            GameObject buller02 = (GameObject)Instantiate(PlayerBulletGO);
+            buller02.transform.position = bulletPosition02.transform.position; // set init position
+        }
         float x = Input.GetAxisRaw("Horizontal"); // -1/0/1 = left , no input, right
         float y = Input.GetAxisRaw("Vertical");  // -1/0/1 = down, no input , up
         // npw based on the input we compute a direction verctor and we normilaize it to get unit vector
@@ -36,6 +49,7 @@ public class PlayerControl : MonoBehaviour {
 
         //get player current position 
         Vector2 pos = transform.position;
+        
 
         pos += direction * speed * Time.deltaTime;
 
@@ -43,6 +57,7 @@ public class PlayerControl : MonoBehaviour {
         pos.x = Mathf.Clamp(pos.x, min.x, max.x);
         pos.y = Mathf.Clamp(pos.y, min.y, max.y);
 
+        
         // update the player position
         transform.position = pos;
 
