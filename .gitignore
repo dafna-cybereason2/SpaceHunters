@@ -1,9 +1,12 @@
-[Ll]ibrary/
+Library/
+library/
+library-temp/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+.idea
 
 # Visual Studio cache directory
 .vs/
