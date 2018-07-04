@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class GameManager : MonoBehaviour
     public GameObject enemySpawner;
     public GameObject GameOverGO;
     public GameObject ScoreText;
+    public GameObject player2Ship;
 
     public enum GameManagerState
     {
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
 
                 //set player ship visible
                 playerShip.GetComponent<PlayerControl>().Init();
+                player2Ship.GetComponent<Player2Control>().Init();
 
                 //start enemy spawner
                 enemySpawner.GetComponent<EnemySpwner>().ScheduledEnemySpawner();
@@ -72,8 +75,11 @@ public class GameManager : MonoBehaviour
                 //display game over
                 GameOverGO.SetActive(true);
 
+                //load credits scene
+                StartCoroutine(LoadLevelDelay(5));
+
                 //change state to opening
-                Invoke("ChangeToOpeningState", 8f);
+                //Invoke("ChangeToOpeningState", 5f);
 
                 break;
         }
@@ -98,5 +104,10 @@ public class GameManager : MonoBehaviour
     {
         SetGameManagerState(GameManagerState.Opening);
 
+    }
+    IEnumerator LoadLevelDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene("Credits");
     }
 }

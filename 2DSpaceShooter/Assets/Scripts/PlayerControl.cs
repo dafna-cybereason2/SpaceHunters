@@ -9,6 +9,7 @@ public class PlayerControl : MonoBehaviour {
     public GameObject bulletPosition02;
     public GameObject GameManagerGO; //game manager
     public GameObject ExplosionGO;
+    AudioSource MyAudio;
     //lives ui text
     public GameObject LiveUIText;
 
@@ -19,7 +20,7 @@ public class PlayerControl : MonoBehaviour {
     public void  Init()
     {
         LiveUIText.GetComponent<Text>().text = MaxLives.ToString();
-        
+
         // Reset position to center
         transform.position = new Vector2 (0,0);
 
@@ -29,14 +30,17 @@ public class PlayerControl : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-		
-	}
+
+        MyAudio = GetComponent<AudioSource>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
         //fire when space 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetButtonDown("Fire1"))
         {
+            MyAudio.Play();
             //init fist bullet
             GameObject buller01 = (GameObject)Instantiate(PlayerBulletGO);
             buller01.transform.position = bulletPosition01.transform.position;
@@ -93,14 +97,14 @@ public class PlayerControl : MonoBehaviour {
             PlayExplosion();
             
             lives--;
-            LiveUIText.GetComponent<Text>().text = lives.ToString(); 
+            LiveUIText.GetComponent<Text>().text = lives.ToString();
         }
 
 
         //part 7- after Play Explosion part (destroy is removed in this phase)
         if(lives == 0)
         {
-            Destroy(gameObject); //Distroy the  player ship
+            gameObject.SetActive(false); //"disable" the  player ship
             //game over
             GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
 
