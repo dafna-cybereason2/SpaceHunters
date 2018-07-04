@@ -852,7 +852,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1413863880
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1306,8 +1306,7 @@ MonoBehaviour:
   GameManagerGO: {fileID: 2018476972}
   ExplosionGO: {fileID: 1295090288888686, guid: 62123cd4b395d904094a9ed965545e5c,
     type: 2}
-  Audio: {fileID: 0}
-  LiveUIText: {fileID: 1115177465}
+  LiveUIText: {fileID: 1115177463}
   speed: 4
 --- !u!61 &1613240743
 BoxCollider2D:
@@ -1829,7 +1828,9 @@ MonoBehaviour:
   playerShip: {fileID: 1613240738}
   enemySpawner: {fileID: 1838630317}
   GameOverGO: {fileID: 1656026697}
+  ScoreText: {fileID: 1460625816}
   player2Ship: {fileID: 467805680}
+  testmode: 0
 --- !u!1 &2072956484
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,8 @@ TagManager:
   - EnemyBulletTag
   - ScoreTextTag
   - LivesTextTag
+  - GameData
+  - MenuController
   layers:
   - Default
   - TransparentFX

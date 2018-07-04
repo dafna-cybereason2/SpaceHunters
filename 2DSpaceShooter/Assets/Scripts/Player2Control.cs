@@ -39,7 +39,7 @@ public class Player2Control : MonoBehaviour
     void Update()
     {
         //fire when space 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire2"))
         {
             //init fist bullet
             GameObject buller01 = (GameObject)Instantiate(PlayerBulletGO);

@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     public GameObject GameOverGO;
     public GameObject ScoreText;
     public GameObject player2Ship;
+	GameObject GameDataGO;
+	bool OnePlayer;
+	bool TwoPlayer;
+	public bool testmode = false;
 
     public enum GameManagerState
     {
@@ -31,7 +35,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         GMState = GameManagerState.Opening;
+		GameDataGO = GameObject.FindGameObjectWithTag ("GameData");
         GlobalTimer = 0;
+		StartGamePlay ();
+
     }
 
     void Update()
@@ -50,18 +57,33 @@ public class GameManager : MonoBehaviour
                 GameOverGO.SetActive(false);
 
                 //play button show
-                playButton.SetActive(true);
+                //playButton.SetActive(true);
 
                 break;
-            case GameManagerState.Gameplay:
+		case GameManagerState.Gameplay:
                 //Reset the score 
-                scoreUITextGO.GetComponent<GameScore>().Score = 0;
+			scoreUITextGO.GetComponent<GameScore> ().Score = 0;
                 //hide play button
-                playButton.SetActive(false);
+			playButton.SetActive (false);
 
                 //set player ship visible
-                playerShip.GetComponent<PlayerControl>().Init();
-                player2Ship.GetComponent<Player2Control>().Init();
+			if (testmode == false) {
+				if (GameDataGO.GetComponent<GameDataControl> ().OnePlayerGame == true) {
+					playerShip.GetComponent<PlayerControl> ().Init ();
+					GameDataGO.GetComponent<GameDataControl> ().OnePlayerGame = false;
+
+				}
+				if (GameDataGO.GetComponent<GameDataControl> ().TwoPlayerGame) {
+					playerShip.GetComponent<PlayerControl> ().Init ();
+					player2Ship.GetComponent<Player2Control> ().Init ();
+					GameDataGO.GetComponent<GameDataControl> ().TwoPlayerGame = false;
+				}
+			} else {
+				playerShip.GetComponent<PlayerControl> ().Init ();
+				player2Ship.GetComponent<Player2Control> ().Init ();
+				GameDataGO.GetComponent<GameDataControl> ().TwoPlayerGame = false;
+			}
+
 
                 //start enemy spawner
                 enemySpawner.GetComponent<EnemySpwner>().ScheduledEnemySpawner();
