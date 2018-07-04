@@ -349,4 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b39424cb1c745c44c9fd19277e7f8800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerBulletGO: {fileID: 1358142670951538, guid: f18d1b24d5502bd46b1cb64a67507a4d,
+    type: 2}
+  bulletPosition01: {fileID: 661156224}
+  bulletPosition02: {fileID: 529617309}
   speed: 4
