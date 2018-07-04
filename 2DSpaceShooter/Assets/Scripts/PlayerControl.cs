@@ -8,7 +8,7 @@ public class PlayerControl : MonoBehaviour {
     public GameObject bulletPosition01;
     public GameObject bulletPosition02;
     public GameObject GameManagerGO; //game manager
-
+    public GameObject ExplosionGO;
     //lives ui text
     public Text LiveUIText;
 
@@ -88,23 +88,31 @@ public class PlayerControl : MonoBehaviour {
      void OnTriggerEnter2D(Collider2D collision)
     {
         //Dafna's part 6 here
+        //player ship with an enmy ship
         if ((collision.tag == "EnemyShipTag") || (collision.tag == "EnemyBulletTag"))
         {
-            Destroy(gameObject); //Distroy the  player ship
+            PlayExplosion();
+            
+            lives--;
+            LiveUIText.text = lives.ToString();
         }
 
 
         //part 7- after Play Explosion part (destroy is removed in this phase)
-        lives--;
-        LiveUIText.text = lives.ToString();
-
         if(lives == 0)
         {
+            Destroy(gameObject); //Distroy the  player ship
             //game over
             GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
 
             //hide player ship
             gameObject.SetActive(false);
         }
+    }
+
+    void PlayExplosion()
+    {
+        GameObject explosion = (GameObject)Instantiate(ExplosionGO);
+        explosion.transform.position = transform.position;
     }
 }

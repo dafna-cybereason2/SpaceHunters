@@ -15,6 +15,7 @@ public class GameScore : MonoBehaviour {
         set
         {
             this.score = value;
+            UpdateScoreTextUI();
         }
     }
 	// Use this for initialization

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyControl : MonoBehaviour {
+    public GameObject ExplosionGO;
     GameObject scoreUITextGO; /// Refrence to the text UI game object
     float speed;
     // Use this for initialization
@@ -34,17 +35,23 @@ public class EnemyControl : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col)
 
     {
-        if ((col.tag == "playerShipTag") || (col.tag == "PlayerBulletTag"))
+        // 
+        if ((col.tag == "PlayerShipTag") || (col.tag == "PlayerBulletTag"))
         {
+            
             PlayExplosion();
-            scoreUITextGO.GetComponent<GameScore>().Score += 100;
             Destroy(gameObject);
+            scoreUITextGO.GetComponent<GameScore>().Score += 100;
+          
 
 
         }
     }
     void PlayExplosion()
-    { }
+    {
+        GameObject explosion = (GameObject)Instantiate(ExplosionGO);
+        explosion.transform.position = transform.position;
+    }
 
 
 }

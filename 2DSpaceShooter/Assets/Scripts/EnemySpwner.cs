@@ -29,14 +29,37 @@ public class EnemySpwner : MonoBehaviour {
 
         GameObject anEnemy = (GameObject)Instantiate(EnemyGO);
         anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+        //Schedule spawn
+        ScheduledNextEnemySpawn();
     }
 
+    void ScheduledNextEnemySpawn()
+    {
+        float spawnInSeconds;
+        if (maxSpawnRateInSec > 1f)
+        {
+            spawnInSeconds = Random.Range(1F, maxSpawnRateInSec);
+        }
+        else
+            spawnInSeconds = 1f;
+        Invoke("SpawnEnemy", spawnInSeconds);
+    }
+
+    //increase enemy spawn rate
+    void IncreaseSpawnRate()
+     {
+        if (maxSpawnRateInSec > 1f)
+            maxSpawnRateInSec--;
+
+        if (maxSpawnRateInSec == 1f)
+            CancelInvoke("IncreaseSpawnRate");
+    }
     //Start enemy spawn
     public void ScheduledEnemySpawner()
     {
         Invoke("SpawnEnemy", maxSpawnRateInSec);
+        InvokeRepeating("IncreaseSpawnRate", 0f, 30f);
         
-        //missing the IncreaseSpawnFunction. DON'T FORGET TO ADD IT AFTER READY
     }
     
     //Stop enemny spawn on gameover
