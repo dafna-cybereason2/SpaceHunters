@@ -470,7 +470,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 27
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 2
@@ -515,7 +515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 684d775bb6757ab4baaee9c4885fafce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyGO: {fileID: 1924900537254200, guid: 9f94edae32d421b4aae95e710ed4bae9, type: 2}
 --- !u!4 &1258614281
 Transform:
   m_ObjectHideFlags: 0
@@ -767,7 +766,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cc22966852b21ae48be4dad1a38d227f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0844152321d5f746b5a561ab3a173bc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -893,7 +892,7 @@ MonoBehaviour:
   bulletPosition01: {fileID: 661156224}
   bulletPosition02: {fileID: 529617309}
   GameManagerGO: {fileID: 2018476972}
-  LiveUIText: {fileID: 0}
+  LiveUIText: {fileID: 1115177465}
   speed: 4
 --- !u!1 &1656026697
 GameObject:
@@ -910,7 +909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1656026698
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1023,7 +1022,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: ff4cfb4fe123bb7419c7ba489c369b97, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92811f6e94c8f2547b219e76a05cc3f9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1216,5 +1215,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playButton: {fileID: 1413863879}
   playerShip: {fileID: 1613240738}
-  enemySpawner: {fileID: 0}
+  enemySpawner: {fileID: 1838630317}
   GameOverGO: {fileID: 1656026697}

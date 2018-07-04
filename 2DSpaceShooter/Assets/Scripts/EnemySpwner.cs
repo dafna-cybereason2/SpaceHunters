@@ -9,7 +9,6 @@ public class EnemySpwner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        Invoke("SpawnEnemy", maxSpawnRateInSec);
 		
 	}
 	
