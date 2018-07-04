@@ -1,15 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour {
     public GameObject PlayerBulletGO; // this is out player bullet prefab
     public GameObject bulletPosition01;
     public GameObject bulletPosition02;
+    public Text LiveUIText;
+
+    const int MaxLives = 3; //max lives
+    int lives; //current lives
 
     public float speed;
-	// Use this for initialization
-	void Start () {
+
+    public void  Init()
+    {
+        lives = MaxLives;
+        LiveUIText.text = lives.ToString();
+
+        // Reset position to center
+        transform.position = new Vector2 (0,0);
+
+        //set this player to active
+        gameObject.SetActive(true);
+
+    }
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
