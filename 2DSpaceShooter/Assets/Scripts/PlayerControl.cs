@@ -21,7 +21,6 @@ public class PlayerControl : MonoBehaviour {
     {
         lives = MaxLives;
         LiveUIText.text = lives.ToString();
-
         // Reset position to center
         transform.position = new Vector2 (0,0);
 
@@ -101,7 +100,7 @@ public class PlayerControl : MonoBehaviour {
         //part 7- after Play Explosion part (destroy is removed in this phase)
         if(lives == 0)
         {
-            Destroy(gameObject); //Distroy the  player ship
+            gameObject.SetActive(false); //"disable" the  player ship
             //game over
             GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
 
