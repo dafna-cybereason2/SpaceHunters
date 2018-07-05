@@ -12,6 +12,7 @@ public class PlayerControl : MonoBehaviour {
     AudioSource MyAudio;
     //lives ui text
     public GameObject LiveUIText;
+	float BulletOffsetX ;
 
 
     const int MaxLives = 3; //max lives
