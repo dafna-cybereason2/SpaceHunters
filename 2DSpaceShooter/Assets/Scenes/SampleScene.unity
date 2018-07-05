@@ -175,7 +175,7 @@ MonoBehaviour:
   GameManagerGO: {fileID: 2018476972}
   ExplosionGO: {fileID: 1295090288888686, guid: 62123cd4b395d904094a9ed965545e5c,
     type: 2}
-  LiveUIText: {fileID: 1115177465}
+  LiveUIText: {fileID: 0}
   speed: 0
 --- !u!95 &467805683
 Animator:
@@ -1618,6 +1618,7 @@ MonoBehaviour:
   - {fileID: 1433613720860492, guid: 60c1633e3cacde2469d09e4a479aabcc, type: 2}
   - {fileID: 1869650743646766, guid: 925148baaa79ae941a247527f2a2e90e, type: 2}
   - {fileID: 1700864535857838, guid: 8a8fca077be976749a2e36a7542d8d8f, type: 2}
+  - {fileID: 1044953963015260, guid: 78aa5135d96b58e408a54bdac99ae042, type: 2}
   Malops:
   - {fileID: 1964276503554936, guid: 1fa9039604637c847afe57b4af80bc49, type: 2}
   - {fileID: 1540757688514220, guid: da50c6a24aa6dc44fbd6e432391ff92f, type: 2}
