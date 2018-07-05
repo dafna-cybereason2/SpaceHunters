@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
 	bool OnePlayer;
 	bool TwoPlayer;
 	public bool testmode = false;
+	public bool playerOneAlive = true;
+	public bool playerTwoAlive = true;
 
     public enum GameManagerState
     {
@@ -45,6 +47,9 @@ public class GameManager : MonoBehaviour
     {
         GlobalTimer += Time.deltaTime;
         //Debug.Log("GlobalTimer: "+ GlobalTimer);
+		if (playerOneAlive == false && playerTwoAlive == false) {
+			SetGameManagerState(GameManager.GameManagerState.GameOver);
+		}
     }
     // Update game manager state
     void UpdateGameManagerState()
@@ -69,6 +74,7 @@ public class GameManager : MonoBehaviour
                 //set player ship visible
 			if (testmode == false) {
 				if (GameDataGO.GetComponent<GameDataControl> ().OnePlayerGame == true) {
+					playerTwoAlive = false;
 					playerShip.GetComponent<PlayerControl> ().Init ();
 					GameDataGO.GetComponent<GameDataControl> ().OnePlayerGame = false;
 

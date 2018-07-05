@@ -14,6 +14,8 @@ public class PlayerControl : MonoBehaviour {
     public GameObject LiveUIText;
 	float BulletOffsetX ;
 	private Vector2 initialPos;
+	public GameObject GameData;
+
 
 
     const int MaxLives = 3; //max lives
@@ -111,7 +113,8 @@ public class PlayerControl : MonoBehaviour {
         {
             gameObject.SetActive(false); //"disable" the  player ship
             //game over
-            GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
+            //GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
+			GameManagerGO.GetComponent<GameManager>().playerOneAlive = false;
 
             //hide player ship
             gameObject.SetActive(false);

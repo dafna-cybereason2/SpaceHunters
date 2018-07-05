@@ -111,7 +111,8 @@ public class Player2Control : MonoBehaviour {
 		{
 			gameObject.SetActive(false); //"disable" the  player ship
 			//game over
-			GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
+			//GameManagerGO.GetComponent<GameManager>().SetGameManagerState(GameManager.GameManagerState.GameOver);
+			GameManagerGO.GetComponent<GameManager>().playerTwoAlive = false;
 
 			//hide player ship
 			gameObject.SetActive(false);

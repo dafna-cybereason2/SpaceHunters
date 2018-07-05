@@ -4,40 +4,51 @@ using UnityEngine;
 
 public class EnemyGun : MonoBehaviour
 {
-    public GameObject EnemyBulletGO; //this is our enemy bullet prefab
+	public GameObject EnemyBulletGO; //this is our enemy bullet prefab
 
 	// Use this for initialization
 	void Start ()
-    {
-        //fire an enemy bullet after 1 second
-        Invoke("FireEnemyBullet", 1f);
+	{
+		//fire an enemy bullet after 1 second
+		Invoke("FireEnemyBullet", 1f);
 	}
-	
+
 	// Update is called once per frame
 	void Update ()
-    {
-		
+	{
+
 	}
 
-    //Function to fire an enemy bullet
-    void FireEnemyBullet()
-    {
-        //get a reference to the player's ship
-        GameObject playerShip = GameObject.Find("PlayerGO");
+	//Function to fire an enemy bullet
+	void FireEnemyBullet()
+	{
+		GameObject playerShip = null;
+		int rand = Random.Range(0, 2);
+		//get a reference to the player's ship
+		if (rand == 0) {
+			Debug.Log ("One");
+			playerShip = GameObject.Find ("PlayerGO");
+		}
 
-        if(playerShip != null) //if the player is not dead
-        {
-            //instantiate an enemy bullet
-            GameObject bullet = (GameObject)Instantiate(EnemyBulletGO);
+		if (rand == 1) {
+			Debug.Log ("TWo");
+			playerShip = GameObject.Find ("PlayerGO_2");
+		}
 
-            //set the bullet's initial position
-            bullet.transform.position = transform.position;
 
-            //compute the bullet's direction towards the player's ship
-            Vector2 direction = playerShip.transform.position - bullet.transform.position;
+		if(playerShip != null) //if the player is not dead
+		{
+			//instantiate an enemy bullet
+			GameObject bullet = (GameObject)Instantiate(EnemyBulletGO);
 
-            //set the bullet's direction
-            bullet.GetComponent<EnemyBullet>().SetDirection(direction);
-        }
-    }
+			//set the bullet's initial position
+			bullet.transform.position = transform.position;
+
+			//compute the bullet's direction towards the player's ship
+			Vector2 direction = playerShip.transform.position - bullet.transform.position;
+
+			//set the bullet's direction
+			bullet.GetComponent<EnemyBullet>().SetDirection(direction);
+		}
+	}
 }
