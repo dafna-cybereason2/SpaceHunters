@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
 			} else {
 				playerShip.GetComponent<PlayerControl> ().Init ();
 				player2Ship.GetComponent<Player2Control> ().Init ();
-				GameDataGO.GetComponent<GameDataControl> ().TwoPlayerGame = false;
+				//GameDataGO.GetComponent<GameDataControl> ().TwoPlayerGame = false;
 			}
 
 
