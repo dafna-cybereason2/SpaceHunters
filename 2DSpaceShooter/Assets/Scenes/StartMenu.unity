@@ -491,8 +491,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc4b47c565868c4caf98daf95748820, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnePlayerGame: 1
-  TwoPlayerGame: 1
+  OnePlayerGame: 0
+  TwoPlayerGame: 0
 --- !u!4 &1135899214
 Transform:
   m_ObjectHideFlags: 0
