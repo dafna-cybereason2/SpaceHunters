@@ -1814,7 +1814,7 @@ MonoBehaviour:
   GameOverGO: {fileID: 1656026697}
   ScoreText: {fileID: 1460625816}
   player2Ship: {fileID: 467805680}
-  testmode: 1
+  testmode: 0
 --- !u!1 &2072956484
 GameObject:
   m_ObjectHideFlags: 0
