@@ -547,7 +547,7 @@ GameObject:
   - component: {fileID: 1115177465}
   m_Layer: 5
   m_Name: TextLives
-  m_TagString: Untagged
+  m_TagString: LivesTextTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1742,6 +1742,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyGO: {fileID: 1103867749310402, guid: 0c304e5fadd6a4547b8a03ebf3dc6bbf, type: 2}
+  Heads:
+  - {fileID: 1670359457109932, guid: e1b07451161203049b8574fd9bb1b6da, type: 2}
+  - {fileID: 1558796440539810, guid: bb2edd105c9de19418ed4870cfc321d1, type: 2}
+  - {fileID: 1634508569781390, guid: 5be9c203310ff5f4cb094023a1bc13ef, type: 2}
+  - {fileID: 1235823023875592, guid: 8d8e17bfd29ee0546b8082a4a9ef2fef, type: 2}
+  - {fileID: 1665082400744428, guid: e0f548800f0391b4da5686c7a252ce21, type: 2}
+  - {fileID: 1348492840028728, guid: b16bcbb74e395684f87579ac80168c7c, type: 2}
+  - {fileID: 1312533663152000, guid: 1cfce02626929784688bcafc76d11247, type: 2}
+  - {fileID: 1671404021315978, guid: 6c2837f6b82ce6345a63a531a5a3de46, type: 2}
+  Malops:
+  - {fileID: 1964276503554936, guid: 1fa9039604637c847afe57b4af80bc49, type: 2}
+  - {fileID: 1540757688514220, guid: da50c6a24aa6dc44fbd6e432391ff92f, type: 2}
+  - {fileID: 1793754888068446, guid: 83c983c0b55bdbb4aad80a2d2b9afdb5, type: 2}
 --- !u!4 &1838630319
 Transform:
   m_ObjectHideFlags: 0

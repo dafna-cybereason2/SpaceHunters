@@ -6,18 +6,26 @@ public class EnemySpwner : MonoBehaviour {
     
     /// </summary>
     public GameObject EnemyGO;
+    public GameObject[] Heads;
+    public GameObject[] Malops;
     float maxSpawnRateInSec = 5f;
     float minSpawnRateInSec = 1f;
+    float currTime = 0;
+    float startTime = 0;
+    //static Random rnd = new Random();
 
     // Use this for initialization
     void Start () {
-		
-	}
+        startTime = Time.deltaTime;
+        currTime = startTime;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        currTime = currTime + Time.deltaTime;
+        
+    }
 
     //Function to swap an enemy
     void SpawnEnemy()
@@ -28,8 +36,20 @@ public class EnemySpwner : MonoBehaviour {
         //top right left
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-        GameObject anEnemy = (GameObject)Instantiate(EnemyGO);
-        anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+        if (currTime > 20)
+        {
+            int r = Random.Range(0, Heads.Length);
+            GameObject anEnemy = (GameObject)Instantiate(Heads[r]);
+            anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+        }
+        else
+        {
+            int r = Random.Range(0, Malops.Length);
+            GameObject anEnemy = (GameObject)Instantiate(Malops[r]);
+            anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
+        }
+      
+       
         //Schedule spawn
         ScheduledNextEnemySpawn();
     }
