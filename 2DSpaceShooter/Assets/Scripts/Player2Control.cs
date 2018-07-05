@@ -65,10 +65,10 @@ public class Player2Control : MonoBehaviour
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1)); // top right point corner
 
         max.x = max.x - 0.225f;
-        min.x = min.x - 0.225f;
+        min.x = min.x + 0.225f;
 
         max.y = max.y - 0.225f;
-        min.y = min.y - 0.225f;
+        min.y = min.y + 0.225f;
 
         //get player current position 
         Vector2 pos = transform.position;

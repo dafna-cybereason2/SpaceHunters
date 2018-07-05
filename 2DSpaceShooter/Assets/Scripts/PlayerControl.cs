@@ -62,13 +62,15 @@ public class PlayerControl : MonoBehaviour {
     void Move(Vector2 direction)
     {
         Vector2 min = Camera.main.ViewportToWorldPoint(new Vector2(0, 0)); // botoom left point corner
-        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1)); // top right point corner
+        Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1)); // top right point corner        
 
         max.x = max.x - 0.225f;
-        min.x = min.x - 0.225f;
+        min.x = min.x + 0.225f;
 
         max.y = max.y - 0.225f;
-        min.y = min.y - 0.225f;
+        min.y = min.y + 0.225f;
+        
+
 
         //get player current position 
         Vector2 pos = transform.position;
