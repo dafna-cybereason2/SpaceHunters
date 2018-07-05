@@ -11,13 +11,13 @@ public class EnemySpwner : MonoBehaviour {
     float maxSpawnRateInSec = 5f;
     float minSpawnRateInSec = 1f;
     float currTime = 0;
-    float startTime = 0;
+    
     //static Random rnd = new Random();
 
     // Use this for initialization
     void Start () {
-        startTime = Time.deltaTime;
-        currTime = startTime;
+        
+        currTime = Time.deltaTime;
 
     }
 	
@@ -36,7 +36,9 @@ public class EnemySpwner : MonoBehaviour {
         //top right left
         Vector2 max = Camera.main.ViewportToWorldPoint(new Vector2(1, 1));
 
-        if (currTime > 20)
+        int rand = Random.Range(0, 2);
+        if (currTime > 15 && rand % 2 == 0)
+            
         {
             int r = Random.Range(0, Heads.Length);
             GameObject anEnemy = (GameObject)Instantiate(Heads[r]);
@@ -44,6 +46,7 @@ public class EnemySpwner : MonoBehaviour {
         }
         else
         {
+           
             int r = Random.Range(0, Malops.Length);
             GameObject anEnemy = (GameObject)Instantiate(Malops[r]);
             anEnemy.transform.position = new Vector2(Random.Range(min.x, max.x), max.y);
