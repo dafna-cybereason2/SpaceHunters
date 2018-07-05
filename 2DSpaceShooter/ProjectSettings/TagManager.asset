@@ -12,6 +12,7 @@ TagManager:
   - LivesTextTag
   - GameData
   - MenuController
+  - LivesTextTag2
   layers:
   - Default
   - TransparentFX
