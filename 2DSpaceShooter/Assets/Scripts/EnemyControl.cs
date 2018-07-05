@@ -12,9 +12,9 @@ public class EnemyControl : MonoBehaviour {
     // Use this for initialization
     void Start() {
         LiveUIText = GameObject.FindGameObjectWithTag("LivesTextTag");
-        speed = 2f + ((int)(GameManager.GlobalTimer / 10));
-        if (speed>5)
-            speed = 5;
+        speed = 2f + ((int)(GameManager.GlobalTimer / 30 ));
+        if (speed>6)
+            speed = 6;
         //Debug.Log("start : "+speed);
         ////Get the score text UI
         scoreUITextGO = GameObject.FindGameObjectWithTag("ScoreTextTag");
