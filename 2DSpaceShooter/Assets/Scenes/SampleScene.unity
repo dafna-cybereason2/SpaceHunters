@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &467805681
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -861,6 +861,7 @@ GameObject:
   - component: {fileID: 1301586922}
   - component: {fileID: 1301586924}
   - component: {fileID: 1301586923}
+  - component: {fileID: 1301586925}
   m_Layer: 5
   m_Name: ImageLivesUiBg_2
   m_TagString: Untagged
@@ -920,6 +921,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1301586921}
+--- !u!114 &1301586925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1301586921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aaecd0bcc2d8cb499154c065cc739d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameData: {fileID: 0}
 --- !u!1 &1413863879
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,7 +1827,7 @@ MonoBehaviour:
   GameOverGO: {fileID: 1656026697}
   ScoreText: {fileID: 1460625816}
   player2Ship: {fileID: 467805680}
-  testmode: 1
+  testmode: 0
 --- !u!1 &2072956484
 GameObject:
   m_ObjectHideFlags: 0
