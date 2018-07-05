@@ -13,6 +13,7 @@ public class PlayerControl : MonoBehaviour {
     //lives ui text
     public GameObject LiveUIText;
 	float BulletOffsetX ;
+	private Vector2 initialPos;
 
 
     const int MaxLives = 3; //max lives
@@ -31,7 +32,7 @@ public class PlayerControl : MonoBehaviour {
     }
     // Use this for initialization
     void Start () {
-
+		initialPos = gameObject.transform.position; 
         MyAudio = GetComponent<AudioSource>();
 
     }
@@ -101,6 +102,7 @@ public class PlayerControl : MonoBehaviour {
             
             lives--;
             LiveUIText.GetComponent<Text>().text = lives.ToString();
+			gameObject.transform.position = initialPos;
         }
 
 

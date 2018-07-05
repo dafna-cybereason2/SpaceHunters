@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class EnemyControl : MonoBehaviour {
     public GameObject ExplosionGO;
     GameObject LiveUIText;
+	GameObject LiveUIText2;
     GameObject scoreUITextGO; /// Refrence to the text UI game object
 
     float speed;
     // Use this for initialization
     void Start() {
         LiveUIText = GameObject.FindGameObjectWithTag("LivesTextTag");
+		LiveUIText2 = GameObject.FindGameObjectWithTag("LivesTextTag2");
         speed = 2f + ((int)(GameManager.GlobalTimer / 30 ));
         if (speed>6)
             speed = 6;
@@ -45,17 +47,30 @@ public class EnemyControl : MonoBehaviour {
         // 
         if ((col.tag == "PlayerShipTag") || (col.tag == "PlayerBulletTag"))
         {
+			if (col.gameObject.name == "PlayerGO") {
             
-            PlayExplosion();
-            Destroy(gameObject);
-            scoreUITextGO.GetComponent<GameScore>().Score += 100;
+				PlayExplosion ();
+				Destroy (gameObject);
+				scoreUITextGO.GetComponent<GameScore> ().Score += 100;
 
-             if (scoreUITextGO.GetComponent<GameScore>().Score % 1000 == 0)
-            {
-                int lives = (int)float.Parse(LiveUIText.GetComponent<Text>().text.ToString());
-                lives++;
-                LiveUIText.GetComponent<Text>().text = lives.ToString();
-            }
+				if (scoreUITextGO.GetComponent<GameScore> ().Score % 1000 == 0) {
+					int lives = (int)float.Parse (LiveUIText.GetComponent<Text> ().text.ToString ());
+					lives++;
+					LiveUIText.GetComponent<Text> ().text = lives.ToString ();
+				}
+			}
+			if (col.gameObject.name == "PlayerGO_2") {
+
+				PlayExplosion ();
+				Destroy (gameObject);
+				scoreUITextGO.GetComponent<GameScore> ().Score += 100;
+
+				if (scoreUITextGO.GetComponent<GameScore> ().Score % 1000 == 0) {
+					int lives = (int)float.Parse (LiveUIText.GetComponent<Text> ().text.ToString ());
+					lives++;
+					LiveUIText2.GetComponent<Text> ().text = lives.ToString ();
+				}
+			}
 
         }
     }
