@@ -70,11 +70,13 @@ public class ButtonsController : MonoBehaviour
 			{
 				GameDataOB.GetComponent<GameDataControl> ().OnePlayerGame = true;
 				SceneManager.LoadScene ("SampleScene");
+				Debug.Log ("One players mode");
 			}
 			if (index == 1)
 			{
 				GameDataOB.GetComponent<GameDataControl> ().TwoPlayerGame = true;
 				SceneManager.LoadScene ("SampleScene");
+				Debug.Log ("Two players mode");
 			}
 			if (index == 2)
 			{

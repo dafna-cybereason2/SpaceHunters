@@ -47,8 +47,12 @@ public class GameManager : MonoBehaviour
     {
         GlobalTimer += Time.deltaTime;
         //Debug.Log("GlobalTimer: "+ GlobalTimer);
-		if (playerOneAlive == false && playerTwoAlive == false) {
-			SetGameManagerState(GameManager.GameManagerState.GameOver);
+		{
+			if (playerOneAlive == false && playerTwoAlive == false) {
+				SetGameManagerState (GameManager.GameManagerState.GameOver);
+				GameDataGO.GetComponent<GameDataControl> ().OnePlayerGame = false;
+				GameDataGO.GetComponent<GameDataControl> ().TwoPlayerGame = false;
+			}
 		}
     }
     // Update game manager state
@@ -77,12 +81,12 @@ public class GameManager : MonoBehaviour
 					playerTwoAlive = false;
 					playerShip.GetComponent<PlayerControl> ().Init ();
 					GameDataGO.GetComponent<GameDataControl> ().OnePlayerGame = false;
+					playerTwoAlive = false;
 
 				}
 				if (GameDataGO.GetComponent<GameDataControl> ().TwoPlayerGame) {
 					playerShip.GetComponent<PlayerControl> ().Init ();
 					player2Ship.GetComponent<Player2Control> ().Init ();
-					GameDataGO.GetComponent<GameDataControl> ().TwoPlayerGame = false;
 				}
 			} else {
 				playerShip.GetComponent<PlayerControl> ().Init ();
